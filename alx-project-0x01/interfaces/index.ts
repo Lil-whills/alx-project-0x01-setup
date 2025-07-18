@@ -4,13 +4,19 @@ export interface PostProps {
   title: string;
   body: string;
 }
-
 export interface UserProps {
   id: number;
   name: string;
   username: string;
   email: string;
-  address: {
+  phone: string;
+  website: string;
+  company?: {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  };
+  address?: {
     street: string;
     suite: string;
     city: string;
@@ -20,26 +26,15 @@ export interface UserProps {
       lng: string;
     };
   };
-  phone: string;
-  website: string;
-  company: {
-    name: string;
-    catchPhrase: string;
-    bs: string;
-  };
 }
 
-export interface PostData {
-  userId: number;
-  id?: number;
-  title: string;
-  body: string;
-}
-
-export interface PostModalProps {
+export interface UserModalProps {
+  isOpen: boolean;
   onClose: () => void;
-  onSubmit: (post: PostData) => void;
+  onSubmit: (post: UserProps) => void;
+  user: UserData;
 }
+
 
 
 export interface UserData {
@@ -47,7 +42,14 @@ export interface UserData {
   name: string;
   username: string;
   email: string;
-  address: {
+  phone: string;
+  website: string;
+  company?: {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  };
+  address?: {
     street: string;
     suite: string;
     city: string;
@@ -57,15 +59,7 @@ export interface UserData {
       lng: string;
     };
   };
-  phone: string;
-  website: string;
-  company: {
-    name: string;
-    catchPhrase: string;
-    bs: string;
-  };
 }
 
-export interface UserModalProps {
-  user: UserData;
-}
+
+

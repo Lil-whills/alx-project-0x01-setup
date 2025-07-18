@@ -11,10 +11,10 @@ const UserCard: React.FC<UserProps> = ({id, name, username, email, phone, websit
       </div>
 
       <div className="mt-4 text-sm text-gray-500">
-        <p><strong>Address:</strong>{address.street}, {address.suite}, {address.city}, {address.zipcode}</p>
-        <p><strong>Geo:</strong> Lat: {address.geo.lat}, Lng: {address.geo.lng}</p>
-        <p><strong>Company:</strong> {company.name}</p>
-        <p><strong>Catch Phrase:</strong> "{company.catchPhrase}"</p>
+        <p><strong>Address:</strong>{address?.street}, {address?.suite}, {address?.city}, {address?.zipcode}</p>
+        <p><strong>Geo:</strong> Lat: {address?.geo.lat}, Lng: {address?.geo.lng}</p>
+        <p><strong>Company:</strong> {company?.name}</p>
+        <p><strong>Catch Phrase:</strong> "{company?.catchPhrase}"</p>
       </div>
     </div>
   )
